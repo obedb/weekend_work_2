@@ -1,6 +1,14 @@
 # Complete the method called split_array, which two parameters, the first being an array, and the second being an integer. The method will then create an array of other arrays, each one being the size of the indicated by the second parameter. See the driver code for examples.
 
 def split_array(array, array_size)
+  @array = array
+  @array_size = array_size
+
+  combine_array = [array, array_size]
+  final_combine_arrays = combine_array.flatten.uniq.sort 
+  result = final_combine_arrays.each_slice(array_size).to_a 
+
+
 
 end
 
